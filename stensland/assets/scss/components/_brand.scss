@@ -1,0 +1,35 @@
+@import "../variables";
+@import "../mixins";
+
+.stn-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: inherit;
+  text-decoration: none;
+  padding-block: 18px;
+}
+
+.stn-logo {
+  @include flex-center;
+  width: 44px;
+  height: 44px;
+
+  &-svg {
+    width: 44px;
+    height: 44px;
+
+    circle { fill: $stn-navy; stroke: $stn-navy; }
+    text   { fill: #fff; font: 700 16px/1 "Inter", $font-stack; letter-spacing: .5px; }
+  }
+}
+
+.stn-wordmark {
+  font-weight: 600;
+  letter-spacing: .38em;
+  font-size: 22px;
+  color: #1c2a36;
+
+  @include respond(md) { font-size: 18px; letter-spacing: .3em; }
+  @include respond(xs) { display: none; }
+}

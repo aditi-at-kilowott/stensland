@@ -1,0 +1,16 @@
+@import "../variables";
+
+.stn-cta {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: $stn-navy; color: #fff; text-decoration: none; font-weight: 600;
+  padding: 14px 18px; border-radius: 10px;
+  transition: background .2s ease, transform .06s ease;
+
+  .arrow { width: 18px; height: 18px; }
+  .arrow path { fill: none; stroke: #fff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  &:hover { background: $stn-navy-80; }
+  &:active { transform: translateY(1px); }
+
+  @media (max-width: 860px) { padding: 12px 14px; }
+}
