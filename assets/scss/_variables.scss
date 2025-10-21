@@ -1,0 +1,26 @@
+// Colors
+$stn-navy:       #0C2A3A;
+$stn-navy-80:    #0c2a3acc;
+$stn-navy-900:   #0b2533;
+$stn-text:       #0f1721;
+$stn-muted:      #6b7b88;
+$stn-aqua:       #b3d4d4;
+
+// Layout
+$radius: 14px;
+$container: 1200px;
+$gap: 24px;
+
+// Fonts
+$font-stack: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Inter,
+             Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+
+// Breakpoints
+$breakpoints: (
+  xs: 560px,
+  sm: 768px,
+  md: 860px,
+  lg: 960px,
+  xl: 1024px,
+  xxl: 1280px
+);

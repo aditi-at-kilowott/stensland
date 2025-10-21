@@ -1,0 +1,33 @@
+@import "../variables";
+
+.stn-hero-intro { padding: 72px 0 48px; }
+
+.stn-hero-grid {
+  display: grid; gap: 24px;
+  grid-template-columns: 1.15fr 1.5fr; align-items: start;
+
+  @media (max-width: 1024px) { grid-template-columns: 1fr; }
+}
+
+.stn-hero-title {
+  font-size: clamp(72px, 12vw, 100px);
+  line-height: .9;
+  color: #0d3140;
+  margin: 0 0 24px;
+}
+
+.stn-hero-scroll { color: #3a3a3a; font-size: 20px; display: flex; gap: 10px; align-items: center; }
+.stn-hero-lead   { font-size: clamp(18px, 2.2vw, 28px); color: #3a3a3a; line-height: 1.5; }
+
+.stn-hero-icons {
+  margin: 28px 0 0; padding: 0; list-style: none; display: flex; gap: 20px; 
+
+  .stn-icon-btn {
+    display: grid; place-items: center;
+    width: 56px; height: 56px; border-radius: 999px; background: #0d3140; color: #fff;
+    transition: transform .15s ease, opacity .2s ease;
+
+    &:hover { transform: translateY(-2px); opacity: .9; }
+    svg { width: 26px; height: 26px; fill: currentColor; display: block; }
+  }
+}

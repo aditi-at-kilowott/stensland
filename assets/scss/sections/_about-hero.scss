@@ -1,0 +1,103 @@
+@import "../variables";
+@import "../mixins";
+
+.stn-about-hero {
+  position: relative;
+  background: $stn-navy;
+  color: #eaf2f5;
+  padding: clamp(60px, 8vw, 110px) 0;
+  overflow: hidden;
+
+  
+  &.has-topo::before {
+    content: "";
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(1400px 380px at 85% 0%, rgba(255,255,255,.05), transparent 60%),
+      radial-gradient(900px 260px at 20% 10%, rgba(255,255,255,.05), transparent 60%);
+    pointer-events: none;
+    opacity: .9;
+  }
+
+  
+  .stn-about-bg {
+    position: absolute; inset: 0;
+    background: var(--about-bg) center/cover no-repeat;
+    opacity: .12;          
+    mix-blend-mode: screen;
+    pointer-events: none;
+  }
+}
+
+.stn-about-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.95fr 1.1fr; 
+  gap: clamp(20px, 3vw, 40px);
+  align-items: start;
+
+  @include respond(xl) { grid-template-columns: 1fr 1fr; }
+  @include respond(lg) { grid-template-columns: 1fr; }
+}
+
+.stn-about-left {
+  max-width: 56ch;
+}
+.stn-about-title {
+  margin: 0 0 16px;
+  font-weight: 800;
+  font-size: clamp(42px, 7vw, 92px);
+  line-height: 1;
+  color: #fff;
+}
+.stn-about-intro {
+  font-size: clamp(16px, 1.6vw, 20px);
+  line-height: 1.7;
+  color: #dce7ee;
+}
+
+.stn-about-center {
+  align-self: start;
+}
+.stn-about-portrait {
+  position: relative;
+  margin: 0;
+  .portrait { display: block; width: 100%; height: auto; }
+}
+.stn-about-years {
+  position: absolute; left: 0; right: 0; bottom: -22%;
+  margin: 0 auto;
+  width: min(520px, 92%);
+  background: #223745;               
+  color: #eaf2f5;
+  padding: clamp(18px, 2.6vw, 28px) clamp(20px, 3vw, 32px);
+}
+.stn-about-years-num {
+  font-size: clamp(60px, 7.2vw, 112px);
+  line-height: .9;
+  font-weight: 800;
+  margin-bottom: 10px;
+  span { font-weight: 700; margin-left: 6px; }
+}
+.stn-about-years-label {
+  font-size: clamp(16px, 1.6vw, 20px);
+  line-height: 1.5;
+}
+
+.stn-about-right {
+  align-self: start;
+}
+.stn-about-services {
+  list-style: none; padding: 0; margin: clamp(12px, 1.3vw, 18px) 0 0;
+  display: grid; gap: clamp(12px, 1.1vw, 16px);
+
+  li {
+    position: relative; padding-left: 0; 
+    font-size: clamp(16px, 1.6vw, 20px);
+    color: #eaf2f5;
+    opacity: .95;
+  }
+}
+
+@media (max-width: 1024px) {
+  .stn-about-years { position: static; width: 100%; margin-top: 14px; }
+}

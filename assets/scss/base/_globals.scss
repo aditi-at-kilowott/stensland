@@ -1,0 +1,17 @@
+@import "../variables";
+
+* { box-sizing: border-box; }
+
+:root {
+  --stn-navy: #{$stn-navy};
+  --stn-navy-80: #{$stn-navy-80};
+  --stn-text: #{$stn-text};
+  --stn-muted: #{$stn-muted};
+  --radius: #{$radius};
+}
+
+body {
+  margin: 0;
+  font-family: $font-stack;
+  color: $stn-text;
+}

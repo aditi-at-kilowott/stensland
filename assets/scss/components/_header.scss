@@ -1,0 +1,42 @@
+@import "../variables";
+@import "../mixins";
+
+.stn-header {
+  position: sticky; top: 0; z-index: 50; background: #fff;
+  border-top: 3px solid $stn-aqua;
+}
+
+.stn-nav {
+  margin-left: auto;
+
+  .stn-menu {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+
+    a {
+      text-decoration: none;
+      color: $stn-text;
+      font-weight: 500;
+
+      &:hover { color: $stn-navy; }
+    }
+  }
+}
+
+.stn-actions {
+  margin-left: auto; display: flex; align-items: center; gap: 18px;
+}
+
+.stn-lang {
+  @include button-reset;
+  display: inline-flex; align-items: center; gap: 8px;
+  font-weight: 600; font-size: 18px; color: #1c2a36;
+
+  .chev { width: 18px; height: 18px; }
+  .chev path { fill: none; stroke: #1c2a36; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  @include respond(xs) { font-size: 16px; }
+}

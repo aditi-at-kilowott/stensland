@@ -1,0 +1,130 @@
+.stn-projects { padding: 48px 0 24px; }
+.stn-projects .stn-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.stn-title {
+  font-size: clamp(40px, 6vw, 84px);
+  font-weight: 700;
+  color: #0d2230;
+  margin: 0 0 8px;
+}
+.stn-intro {
+  max-width: 860px;
+  color: #2e4758;
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 0 0 24px;
+}
+
+/* Tabs */
+.stn-projects__bar {
+  border-bottom: 1px solid #d9e1e7;
+  margin: 24px 0 32px;
+}
+.stn-tabs {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.stn-tab {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 14px 0;
+  color: #6a7b86;
+  font-size: 18px;
+}
+.stn-tab.is-active {
+  color: #0d2230;
+  font-weight: 700;
+  position: relative;
+}
+.stn-tab.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: #0d2230;
+}
+.stn-tab:focus-visible {
+  outline: 2px solid #0d2230;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.stn-panel { display: none; }
+.stn-panel.is-active { display: block; }
+.stn-panel[hidden] { display: none !important; }
+
+
+.stn-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+}
+@media (max-width: 1024px) {
+  .stn-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .stn-grid { grid-template-columns: 1fr; }
+}
+
+/* Card */
+.stn-prj__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+.stn-prj__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 14px;
+  color: #1d1d1d;
+  font-size: 18px;
+  font-weight: 500;
+}
+.stn-prj__role { color: #1d1d1d; }
+.stn-prj__time { color: #1d1d1d; }
+
+.stn-prj__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0d2230;
+  margin: 8px 0 6px;
+}
+.stn-prj__summary {
+  margin: 0 0 12px;
+  color: #2e4758;
+}
+
+/* ISO badges */
+.stn-prj__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.stn-prj__badge {
+  border: 1px solid #9f9e9e;
+  background: #f0f0f0;
+  color: #9f9e9e;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  line-height: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stn-tab.is-active::after { transition: none; }
+}
